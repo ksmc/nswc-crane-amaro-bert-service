@@ -9,8 +9,7 @@ ENV BERT_S3_BUCKET=${BERT_S3_BUCKET_ARG}
 ENV AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID_ARG}
 ENV AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY_ARG}
 
-#RUN pip install bert-serving-server[http]
-RUN pip install bert-serving-server awscli
+RUN pip install bert-serving-server[http] awscli
 
 RUN mkdir -p /app
 COPY ./entrypoint.sh /app
