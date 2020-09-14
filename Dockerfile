@@ -17,4 +17,4 @@ RUN aws s3 cp ${BERT_S3_BUCKET} /app --recursive
 WORKDIR /app
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD []
-HEALTHCHECK --timeout=5s CMD curl -f http://localhost:8125/status/server || exit 1
+#HEALTHCHECK --timeout=5s CMD curl -f http://localhost:8125/status/server || exit 1
